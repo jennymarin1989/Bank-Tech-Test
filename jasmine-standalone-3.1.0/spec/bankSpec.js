@@ -14,9 +14,7 @@ describe('Bank', function(){
 
   describe("withdraw", function(){
     it("can withdraw money from account", function(){
-      bank.deposit(200)
-      bank.withdraw(200)
-      expect(bank.account).toEqual(0);
+      expect(bank.withdraw(200)).toEqual(200);
     });
   });
 

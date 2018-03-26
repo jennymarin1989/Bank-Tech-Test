@@ -9,5 +9,9 @@ Bank.prototype = {
     return money;
   },
 
+  withdraw: function(money){
+    return money;
+  },
+
 
 }
