@@ -1,6 +1,10 @@
 describe('Bank', function(){
 
-  var bank = new Bank();
+  var bank;
+
+  beforeEach(function(){
+    bank = new Bank();
+  });
 
   describe("deposit", function(){
     it("can deposit money in account", function(){
@@ -14,18 +18,21 @@ describe('Bank', function(){
 
   describe("withdraw", function(){
     it("can withdraw money from account", function(){
-      expect(bank.withdraw(200)).toEqual(200);
+      expect(bank.withdraw(100)).toEqual(100);
+    });
+    it("can check the withdraws made in the account", function(){
+      bank.withdraw(100);
+      expect(bank.withdraws).toContain(100);
     });
   });
 
   describe("Sum of deposit", function(){
     it("gives the total of the desposits made in the account", function(){
-      bank.deposit(100);
       bank.deposit(200);
-      expect(bank.sumDeposit()).toEqual(300);
+      bank.deposit(400);
+      expect(bank.sumDeposit()).toEqual(600);
     });
   });
 
   
-
 });
