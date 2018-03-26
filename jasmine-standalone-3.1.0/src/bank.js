@@ -24,5 +24,14 @@ Bank.prototype = {
     return sum
   },
 
+  sumWithdraws: function(){
+    var sum = 0;
+    var withdraws = this.withdraws;
+    for(var i = 0; i < withdraws.length; i++) {
+     sum += withdraws[i];
+    };
+    return sum
+  },
+
 
   }

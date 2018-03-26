@@ -34,5 +34,13 @@ describe('Bank', function(){
     });
   });
 
-  
+  describe("Sum withdraws", function(){
+  it("gives the total of withdraws made in account", function(){
+    bank.withdraw(50);
+    bank.withdraw(20);
+    expect(bank.sumWithdraws()).toEqual(70);
+  });
+});
+
+
 });
