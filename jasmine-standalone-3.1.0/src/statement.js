@@ -4,8 +4,13 @@ var Statement = function() {
 
 Statement.prototype = {
 
-  print: function(){
-    return this.date ;
+  statementDate: function(){
+
+    var dates = this.date.getDate();
+    var month = this.date.getMonth();
+    var year = this.date.getFullYear();
+
+    return `${dates}/${month}/${year}`
   },
 
 }

@@ -8,7 +8,7 @@ describe("Statement", function(){
 
   describe("print", function(){
     it("Returns a string with balance and date", function(){
-      expect(statement.print()).toEqual(new Date());
+      expect(statement.statementDate()).toEqual('26/2/2018')
     });
   });
 
