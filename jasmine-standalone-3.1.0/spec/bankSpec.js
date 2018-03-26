@@ -18,4 +18,14 @@ describe('Bank', function(){
     });
   });
 
+  describe("Sum of deposit", function(){
+    it("gives the total of the desposits made in the account", function(){
+      bank.deposit(100);
+      bank.deposit(200);
+      expect(bank.sumDeposit()).toEqual(300);
+    });
+  });
+
+  
+
 });

@@ -1,9 +1,9 @@
 var Bank = function() {
   this.account=[];
-  this.DEFAULT_BALANCE = 0;
 };
 
 Bank.prototype = {
+
   deposit: function(money){
     this.account.push(money);
     return money;
@@ -11,6 +11,15 @@ Bank.prototype = {
 
   withdraw: function(money){
     return money;
+  },
+
+  sumDeposit: function(){
+    var sum = 0;
+    var deposits = this.account
+    for(var i = 0; i < deposits.length; i++) {
+     sum += deposits[i];
+    };
+    return sum;
   },
 
 
