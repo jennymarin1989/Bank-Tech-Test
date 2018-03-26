@@ -4,8 +4,10 @@ var Bank = function() {
 };
 
 Bank.prototype = {
-  deposit: function(number){
-    this.account.push(number);
-    return number;
+  deposit: function(money){
+    this.account.push(money);
+    return money;
   },
+
+
 }
