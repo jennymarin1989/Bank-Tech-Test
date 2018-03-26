@@ -42,5 +42,12 @@ describe('Bank', function(){
   });
 });
 
+  describe("balance", function(){
+      it("Returns total balance in account", function(){
+        bank.sumDeposit();
+        bank.sumWithdraws();
+        expect(bank.balance()).toEqual(bank.sumDeposit() - bank.sumWithdraws());
+      });
+    });
 
 });
