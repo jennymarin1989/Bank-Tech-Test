@@ -13,4 +13,5 @@ Statement.prototype = {
     return `${dates}/${month}/${year}`
   },
 
+
 }
