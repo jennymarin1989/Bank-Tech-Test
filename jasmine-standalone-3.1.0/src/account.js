@@ -1,17 +1,17 @@
-var Bank = function() {
+var Account = function() {
   this.balance = 0
-  this.account=[];
+  this.transactions=[];
 };
 
-Bank.prototype = {
+Account.prototype = {
 
   deposit: function(amount){
-    this.account.push(amount);
+    this.transactions.push(amount);
     return this.balance += amount;
   },
 
   withdraw: function(amount){
-    this.account.push(-amount)
+    this.transactions.push(-amount)
     return this.balance -= amount;
   },
 
