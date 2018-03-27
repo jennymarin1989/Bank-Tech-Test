@@ -9,6 +9,9 @@ Transaction.prototype = {
     return amount
   },
 
-  
+  withdraw: function(amount){
+    this.transactions.push(amount);
+    return amount
+  }
 
 }
