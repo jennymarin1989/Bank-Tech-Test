@@ -14,7 +14,7 @@ describe ("Transaction", function(){
 
   describe("withdraw", function(){
     it("returns the amount of money withdraw from account", function(){
-      expect(transaction.withdraw(50)).toEqual(50);
+      expect(transaction.withdraw(50)).toEqual(-50);
     })
   })
 

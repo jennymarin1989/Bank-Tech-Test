@@ -1,17 +1,15 @@
 var Transaction = function(){
-  this.transactions = [];
+
 };
 
 Transaction.prototype = {
 
   deposit: function(amount){
-    this.transactions.push(amount);
-    return amount
+    return amount;
   },
 
   withdraw: function(amount){
-    this.transactions.push(amount);
-    return amount
-  }
+    return -amount;
+  },
 
 }

@@ -1,23 +1,11 @@
 var Account = function() {
-  this.balance = 0
-  this.transactions=[];
+ this.balance = 0;
 };
 
 Account.prototype = {
 
-  deposit: function(amount){
-    this.transactions.push(amount);
-    return this.balance += amount;
+  totalBalance: function(transaction){
+    return this.balance += transaction;
   },
-
-  withdraw: function(amount){
-    this.transactions.push(-amount)
-    return this.balance -= amount;
-  },
-
-  totalBalance: function(){
-  return this.balance;
-  },
-
 
 }

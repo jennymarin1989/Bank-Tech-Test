@@ -1,15 +1,17 @@
 var allTransactions = function(){
-
-  this.balance = 0;
-
+  this.transactions = [];
 };
 
 allTransactions.prototype = {
 
-  deposits: function(amount){
-    return this.balance += amount;
+  deposits: function(deposit){
+    this.transactions.push(deposit);
+    return deposit
   },
 
-
+  withdraws: function(withdraw){
+    this.transactions.push(-withdraw);
+    return -withdraw;
+  }
 
 }
